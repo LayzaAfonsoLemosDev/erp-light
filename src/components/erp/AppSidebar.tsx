@@ -1,5 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { Logo } from '../Logo';
 import {
   LayoutDashboard, Users, Package, ShoppingCart,
   LogOut, Settings, Database, Shield, UserCog
@@ -33,15 +34,7 @@ export function AppSidebar() {
     <aside className="w-64 min-h-screen gradient-sidebar flex flex-col border-r border-sidebar-border">
       {/* Logo */}
       <div className="p-6 border-b border-sidebar-border">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center">
-            <Database className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <div>
-            <h1 className="text-sm font-bold text-sidebar-foreground tracking-tight">ERP Light</h1>
-            <p className="text-xs text-sidebar-foreground/50">Gestão Comercial</p>
-          </div>
-        </div>
+        <Logo size="sm" />
       </div>
 
       {/* Navigation */}
